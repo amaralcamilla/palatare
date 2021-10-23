@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Projeto Palatare
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O proprietário de um restaurante te procurou para desenvolver o site do estabelecimento. Para isso, ele te passa as seguintes informações:
 
-## Available Scripts
+Nome do estabelecimento: Palatare
+Informações: por ora, o site deve apresentar uma lista de receitas criadas a partir do reaproveitamento de alimentos que comumente são jogados fora, como cascas, talos, folhas e sementes de legumes, frutas e verduras. Além de uma tabela contendo as informações nutricionais de alguns alimentos.
+Slogan: Economize e ganhe em saúde!
+Contato: palatare@palatare.com
+O cliente pede para que no site contenha:
 
-In the project directory, you can run:
+Header: com logomarca e nome do estabelecimento no canto superior esquerdo da tela
+Main: com campo de busca e uma lista 6 de receitas (apresentadas com grid de 3 em 3)
+Rodapé: contendo o site para contato com o restaurante
+Para que tenhas sucesso no desenvolvimento do site, siga o passo-a-passo a seguir:
 
-### `npm start`
+1. Crie um componente (Header) que exiba o nome e logo do estabelecimento nas páginas do site (não há uma logo padrão, use a criatividade!), além de um título da página atual.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Adicione no componente (Header) a navegação do site. Possíveis opções: Início e Receitas. Não exiba no cabeçalho a opção para a página atual.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. Crie um componente que apresente uma lista de receitas com alimentos reaproveitados. (Seja criativ@! Não precisa ser necessariamente receitas reais). Cada receita da lista deve conter: imagem, título, subtítulo e um botão para abrir cada receita.
 
-### `npm test`
+4. Crie um componente de busca que seja apresentado no centro da tela. Quando o usuário digitar, filtre a lista com base no título e/ou subtítulo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Crie um componente de tabela contendo as informações nutricionais de 4 frutas ou verduras ou legumes.
 
-### `npm run build`
+6. Crie um componente que apresente um botão onde o usuário possa curtir a receita. O botão terá o estado de selecionado e não selecionado.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. Crie um componente para apresentar as informações da receita, com um título, autor, subtítulo e um texto.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+8. Crie um componente de rodapé (Footer) com o contato do estabelecimento centralizado na página.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+9. Crie um componente para a Página inicial do site de receitas. Inclua o cabeçalho, campo de busca, lista de receitas e o rodapé.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+10. Crie a página para apresentar os dados da receita contendo a Imagem e os detalhes da receita, além da Tabela e Botão de Curtir.
+O conteúdo precisa estar entre o cabeçalho e o rodapé do site.
