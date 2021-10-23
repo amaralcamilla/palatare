@@ -1,0 +1,42 @@
+li {
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-top: 40px;
+    list-style: none;
+    width: 150px;
+    border: 1px solid black;
+}
+
+.recipe-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover; 
+}
+
+.seeRecipe {
+    width: 150px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    background-color: #E4BA64;
+    padding-left: 43px;
+    padding-right: 43px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Tahoma, sans-serif;
+    margin-top: 8px;
+    border: transparent;
+}
+
+.seeRecipe:hover {
+    background-color: #FFAF3A;
+}
+
+p {
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7em;
+    color: rgb(68, 68, 68);
+    display: flex;
+    justify-content: center;
+}
