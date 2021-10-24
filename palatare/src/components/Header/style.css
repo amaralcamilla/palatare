@@ -107,11 +107,12 @@ h3 {
   display: flex;
   justify-content: center;
   font-size: 1em;
-  color: #555555;
+  color: #353535;
   padding-top: 5px;
 }
 header {
   height: 150px;
+  margin-bottom: 30px;
 }
 
 nav {
@@ -131,13 +132,14 @@ nav {
   margin-right: 10px;  
   font-size: 0.8em;
   background-color: #F83E25;
-  color: #FFF; 
+  color: #FFF;
   justify-content: flex-start;
 }
 .btnNav:hover {
   background-color: #f78172;
-  color: black;
+  color: #353535;
   font-style: italic;
+  border-radius: 3px;
 }
 
 .searchBar {
@@ -154,6 +156,6 @@ input {
 }
 
 input:valid {
-  color: #F83E25;
+  color: #353535;
   border: transparent;
 }

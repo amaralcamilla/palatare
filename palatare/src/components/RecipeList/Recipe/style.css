@@ -1,42 +1,47 @@
-li {
-    margin-left: 30px;
-    margin-right: 10px;
-    margin-top: 40px;
-    list-style: none;
-    width: 150px;
-    border: 1px solid black;
+.eachRecipe {
+  margin: 30px 10px 10px 30px;
+  list-style: none;
+  width: 150px;
+  border: 1px solid #353535;
+  border-radius: 3px;
+}
+.heart,
+.share {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: right;
 }
 
-.recipe-image{
-    width: 150px;
-    height: 150px;
-    object-fit: cover; 
+.recipe-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
 
 .seeRecipe {
-    width: 150px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    background-color: #E4BA64;
-    padding-left: 43px;
-    padding-right: 43px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-family: Tahoma, sans-serif;
-    margin-top: 8px;
-    border: transparent;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e4ba64;
+  padding-left: 43px;
+  padding-right: 43px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Tahoma, sans-serif;
+  margin-top: 8px;
+  border: transparent;
 }
 
 .seeRecipe:hover {
-    background-color: #FFAF3A;
+  background-color: #ffaf3a;
 }
 
 p {
-    padding: 0px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.7em;
-    color: rgb(68, 68, 68);
-    display: flex;
-    justify-content: center;
+  padding: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.7em;
+  color: #353535;
+  display: flex;
+  justify-content: center;
 }
