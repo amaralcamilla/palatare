@@ -1,0 +1,56 @@
+.eachRecipe {
+  margin: 30px 10px 10px 30px;
+  list-style: none;
+  width: 200px;
+  border: 1px solid #353535;
+  border-radius: 3px;
+  height: fit-content;
+}
+.heart,
+.share, .redHeart {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: right;
+  color: #353535;
+}
+.redHeart {
+  color: #F83E25;
+}
+
+.recipe-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.seeRecipe {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  background-color: #e4ba64;
+  padding: 10px 43px 10px 43px;
+  font-family: Tahoma, sans-serif;
+  margin-top: 8px;
+  border: transparent;
+}
+
+.seeRecipe:hover {
+  background-color: #ffaf3a;
+  font-style: italic;
+}
+
+p {
+  padding: 5px;
+  text-align: justify;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.6em;
+  color: #353535;
+  display: flex;
+  justify-content: center;
+}
+
+.recipeName {
+  font-weight: bold;
+  font-size: 0.8em;
+  text-align: center;
+}
