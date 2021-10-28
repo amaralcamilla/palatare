@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 import Search from "../../components/Search";
-import RecipeList from "../../components/RecipeList";
+import RecipeList from "../../components/RecipeList"; 
 
 class Home extends React.Component {
   constructor(props) {
@@ -21,15 +21,15 @@ class Home extends React.Component {
     this.setState({ recipeList: resultfilter }); //Pegando o resultado do filter e aplicando na lista.
   };
 
-  render() {
-    return (
-    <>
-    <Header title="DEVs">
-        <button onClick>Receitas</button>
+//   render() {
+//     return (
+//     <>
+//     <Header title="DEVs">
+//         <button onClick>Receitas</button>
     
-    </>
-    );
-  }
+//     </>
+//     );
+//   }
 }
 
 export default Home;
