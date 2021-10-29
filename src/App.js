@@ -24,7 +24,7 @@ class App extends React.Component {
       <div>
         <Header />
 
-        <h1 className="main-title">Receitas</h1>
+        <h1 className="main-title">R E C E I T A S</h1>
 
         <section className="container-recipes">
           {DATA.map((item) => (
@@ -43,6 +43,9 @@ class App extends React.Component {
           <Table />
           <Table />
         </section>
+
+        <RecipePage />
+
         <Footer />
       </div>
     );
