@@ -1,0 +1,74 @@
+.one-recipe {
+  font-family: Tahoma, sans-serif;
+  margin-bottom:50px;
+}
+.recipe-title {
+    font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #212121;
+  text-align: center;
+  margin-top: 7%;
+  margin-bottom: 5px;;
+}
+.recipe-subtitle{
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.recipe-image-bigger {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  margin: 5px 30px 20px 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  float: left;
+}
+
+.recipe-text {
+    text-align: justify;
+    font-size: 0.8em;
+    color: #353535;
+    text-align: justify;
+    margin: 20px;
+}
+.ingredient-item{
+    font-size: 1em;
+    margin-left: 100px;    
+    list-style-type: square;
+    margin: 5px;
+    padding: 2px; 
+}
+.prepare {
+    font-size: 1em;
+    padding: 5px;
+}
+
+.recipe-details {
+    display: inline-block;
+    padding: 5px;
+    margin: 10px 30px 10px 0px;
+}
+
+.seeMore {
+  width: 200px;
+  background-color: #e4ba64;
+  padding: 10px 43px 10px 43px;
+  font-family: Tahoma, sans-serif;
+  margin-top: 8px;
+  border: transparent;
+  display: block;
+}
+
+.seeMore:hover {
+  background-color: #ffaf3a;
+  font-style: italic;
+}
+
+hr {
+    opacity: 50%;
+    margin: 20px 30px 20px 30px;
+}
