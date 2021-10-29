@@ -1,56 +1,60 @@
 .one-recipe {
   font-family: Tahoma, sans-serif;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
 .recipe-title {
-    font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
   font-size: 1.7em;
   font-weight: bold;
   color: #212121;
   text-align: center;
   margin-top: 7%;
-  margin-bottom: 5px;;
+  margin-bottom: 5px;
 }
-.recipe-subtitle{
-    font-size: 1.2em;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
+.recipe-subtitle {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 .recipe-image-bigger {
-  width: 350px;
-  height: 350px;
+  width: 370px;
+  height: 370px;
   object-fit: cover;
-  margin: 5px 30px 20px 30px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  margin: 5px 30px 30px 40px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 5px;
   float: left;
 }
 
 .recipe-text {
-    text-align: justify;
-    font-size: 0.8em;
-    color: #353535;
-    text-align: justify;
-    margin: 20px;
+  text-align: justify;
+  font-size: 0.8em;
+  color: #353535;
+  text-align: justify;
+  margin: 20px;
+  margin-right: 10%;
+  border: 1px solid black;
 }
-.ingredient-item{
-    font-size: 1em;
-    margin-left: 100px;    
-    list-style-type: square;
-    margin: 5px;
-    padding: 2px; 
+.ingredient-item {
+  font-size: 1em;
+  margin-left: 100px;
+  list-style-type: square;
+  margin: 5px;
+  padding: 2px;
 }
 .prepare {
-    font-size: 1em;
-    padding: 5px;
+  font-size: 1em;
+  padding: 5px;
 }
 
 .recipe-details {
-    display: inline-block;
-    padding: 5px;
-    margin: 10px 30px 10px 0px;
+  display: inline-block;
+  padding: 5px;
+  margin: 10px 30px 10px 0px;
 }
 
 .seeMore {
@@ -68,7 +72,23 @@
   font-style: italic;
 }
 
+.heart2,
+.share2 {
+  text-align: right;
+  color: #353535;
+  display:inline-block;
+  padding-right: 20px;
+  font-size: 1.7em;
+}
+
+.heart2:hover {
+  color:#F83E25;
+}
+.share2:hover {
+  color:#008E3D;
+}
+
 hr {
-    opacity: 50%;
-    margin: 20px 30px 20px 30px;
+  opacity: 50%;
+  margin: 20px 30px 20px 30px;
 }
