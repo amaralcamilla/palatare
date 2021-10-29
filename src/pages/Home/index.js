@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../../components/Header";
 import Search from "../../components/Search";
-import RecipeList from "../../components/RecipeList"; 
+import RecipeList from "../../components/RecipeList";
+import Recipe from "../../components/RecipeList/Recipe";
 
 class Home extends React.Component {
   constructor(props) {
@@ -9,7 +10,13 @@ class Home extends React.Component {
 
     this.state = {
       isLoading: true,
-      recipeList: [],
+      recipeList: [
+        {
+          photo: "",
+          title: "",
+          subtitle: "",
+        },
+      ],
     };
   }
   handleChange = (event) => {
@@ -20,16 +27,40 @@ class Home extends React.Component {
     });
     this.setState({ recipeList: resultfilter }); //Pegando o resultado do filter e aplicando na lista.
   };
+  render() {
+    return (
+      <>
+        <Header />
 
-//   render() {
-//     return (
-//     <>
-//     <Header title="DEVs">
-//         <button onClick>Receitas</button>
-    
-//     </>
-//     );
-//   }
+        <Search onChange={this.handleChange} />
+
+        {this.state.isLoading && "Loading..."}
+        {!this.state.isLoading && (
+          <RecipeList>
+            {this.state.recipeList.map((rec) => (
+              <Recipe
+                photo={rec.photo}
+                title={rec.title}
+                subtitle={rec.subtitle}
+              />
+            ))}
+          </RecipeList>
+        )}
+
+
+      </>
+    );
+  }
+
+  //   render() {
+  //     return (
+  //     <>
+  //     <Header title="DEVs">
+  //         <button onClick>Receitas</button>
+
+  //     </>
+  //     );
+  //   }
 }
 
 export default Home;
