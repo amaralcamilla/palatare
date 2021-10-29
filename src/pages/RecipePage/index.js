@@ -4,6 +4,8 @@ import Header from "../../components/Header";
 import { BiTimeFive } from 'react-icons/bi'
 import { CgBowl } from 'react-icons/cg'
 import { GiNotebook } from 'react-icons/gi'
+import { FaRegHeart } from "react-icons/fa";
+import { FaShareAlt } from "react-icons/fa";
 
 class RecipePage extends React.Component {
   render() {
@@ -76,8 +78,9 @@ class RecipePage extends React.Component {
             </span>
             <span className="recipe-details">
               <strong><CgBowl fontSize="15px" /></strong> 4 porções
-            </span>
-
+            </span> <br />
+            <FaRegHeart className="heart2" /> 
+            <FaShareAlt className="share2" /> 
             <button className="seeMore"> Ver mais receitas</button>
           </div>
         </section>
