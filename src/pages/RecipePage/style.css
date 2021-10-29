@@ -24,8 +24,7 @@
   height: 370px;
   object-fit: cover;
   margin: 5px 30px 30px 40px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   border-radius: 5px;
   float: left;
 }
@@ -37,7 +36,6 @@
   text-align: justify;
   margin: 20px;
   margin-right: 10%;
-  border: 1px solid black;
 }
 .ingredient-item {
   font-size: 1em;
@@ -76,16 +74,16 @@
 .share2 {
   text-align: right;
   color: #353535;
-  display:inline-block;
+  display: inline-block;
   padding-right: 20px;
   font-size: 1.7em;
 }
 
 .heart2:hover {
-  color:#F83E25;
+  color: #f83e25;
 }
 .share2:hover {
-  color:#008E3D;
+  color: #008e3d;
 }
 
 hr {
