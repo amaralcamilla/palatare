@@ -10,13 +10,8 @@ class Home extends React.Component {
 
     this.state = {
       isLoading: true,
-      recipeList: [
-        {
-          photo: "",
-          title: "",
-          subtitle: "",
-        },
-      ],
+      recipeList: [],
+
     };
   }
   handleChange = (event) => {
@@ -27,6 +22,24 @@ class Home extends React.Component {
     });
     this.setState({ recipeList: resultfilter }); //Pegando o resultado do filter e aplicando na lista.
   };
+
+  async componentDidMount() {
+    const response = await fetch("/api/allrecipes");
+    const data = await response.json();
+
+    const recipeList = data.results.map((result) => {
+      return {
+        photo: result.image,
+        title: result.title,
+        subtitle: result.subtitle,
+      };
+    });
+    this.setState({
+      isLoading: false,
+      recipeList,
+    });
+  }
+
   render() {
     return (
       <>
@@ -46,21 +59,9 @@ class Home extends React.Component {
             ))}
           </RecipeList>
         )}
-
-
       </>
     );
   }
-
-  //   render() {
-  //     return (
-  //     <>
-  //     <Header title="DEVs">
-  //         <button onClick>Receitas</button>
-
-  //     </>
-  //     );
-  //   }
 }
 
 export default Home;
