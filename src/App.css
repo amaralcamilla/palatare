@@ -1,11 +1,11 @@
-section {
+.container-recipes, .nutri-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
 }
 .main-title {
-    padding-top: 10px;
+    padding-top: 5%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2em;
     font-weight: bold;
