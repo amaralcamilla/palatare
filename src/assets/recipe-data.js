@@ -6,18 +6,24 @@ const DATA = [
     title: "COMPOTA DE MORANGOS",
     subtitle:
       "Morango, limão e pimenta-do-reino. Pode reunir esse trio que dá supercerto!",
-    autor: "Rita Lobo",
-    ingredients: [
-      "500 g de morangos (cerca de 3 xícaras)",
-      "3 colheres (sopa) de açúcar",
-      "1 colher (sopa) de caldo de limão",
-      "pimenta-do-reino moída na hora a gosto",
+    autor: "Palmirinha",
+    recipeText: [
+      {
+        ingredients: [
+          "500 g de morangos (cerca de 3 xícaras)",
+          "3 colheres (sopa) de açúcar",
+          "1 colher (sopa) de caldo de limão",
+          "pimenta-do-reino moída na hora a gosto",
+        ],
+      },
+      {
+        prepare:
+          "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
+      },
     ],
-    prepare:
-      "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "10 minutos",
-    level: "Dificuldade: fácil",
-    portion: "Serve 4 pessoas.",
+    level: "Nível: fácil",
+    servings: "Rende 4 porções.",
   },
 
   {
@@ -37,8 +43,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "50 minutos",
-    level: "Difuldade: média",
-    portion: "Serve 6 pessoas.",
+    level: "Nível: média",
+    servings: "Rende 6 porções.",
   },
 
   {
@@ -58,8 +64,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "60 minutos",
-    level: "Difuldade: difícil",
-    portion: "Serve 4 pessoas.",
+    level: "Nível: difícil",
+    servings: "Rende 4 porções.",
   },
 
   {
@@ -79,8 +85,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "60 minutos",
-    level: "Difuldade: difícil",
-    portion: "Serve 4 pessoas.",
+    level: "Nível: difícil",
+    servings: "Rende 4 porções.",
   },
 
   {
@@ -100,8 +106,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "60 minutos",
-    level: "Difuldade: difícil",
-    portion: "Serve 4 pessoas.",
+    level: "Nível: difícil",
+    servings: "Rende 4 porções.",
   },
 
   {
@@ -120,8 +126,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "60 minutos",
-    level: "Difuldade: difícil",
-    portion: "Serve 4 pessoas.",
+    level: "Nível: difícil",
+    servings: "Rende 4 porções.",
   },
 
   {
@@ -141,8 +147,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "20 minutos",
-    level: "Difuldade: fácil",
-    portion: "Serve 2 pessoas.",
+    level: "Nível: fácil",
+    servings: "Rende 2 porções.",
   },
 
   {
@@ -161,8 +167,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "60 minutos",
-    level: "Difuldade: difícil",
-    portion: "Serve 4 pessoas.",
+    level: "Nível: difícil",
+    servings: "Rende 4 porções.",
   },
 
   {
@@ -182,8 +188,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "60 minutos",
-    level: "Difuldade: difícil",
-    portion: "Serve 4 pessoas.",
+    level: "Nível: difícil",
+    servings: "Rende 4 porções.",
   },
 
   {
@@ -203,8 +209,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "20 minutos",
-    level: "Difuldade: fácil",
-    portion: "Serve 4 pessoas.",
+    level: "Nível: fácil",
+    servings: "Rende 4 porções.",
   },
 
   {
@@ -224,8 +230,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "60 minutos",
-    level: "Difuldade: difícil",
-    portion: "Serve 4 pessoas.",
+    level: "Nível: difícil",
+    servings: "Rende 4 porções.",
   },
 
   {
@@ -245,8 +251,8 @@ const DATA = [
     prepare:
       "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
     duration: "30 minutos",
-    level: "Difuldade: fácil",
-    portion: "Serve 2 pessoas.",
+    level: "Nível: fácil",
+    servings: "Rende 2 porções.",
   },
 ];
 
