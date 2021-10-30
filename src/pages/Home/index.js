@@ -7,7 +7,6 @@ import Footer from "../../components/Footer";
 import DATA from "../../assets/recipe-data";
 
 class Home extends React.Component {
-
   // handleChange = (event) => {
   //   const text = event.target.value
   //   DATA.filter((recipes) => {
@@ -16,21 +15,20 @@ class Home extends React.Component {
   //   this.setState({recipes: filterData})
   //   }
 
-
   constructor(props) {
     super(props);
 
     this.state = {
       isLoading: true,
       recipeList: [],
-
     };
   }
+
   handleChange = (event) => {
     const text = event.target.value; //pegar o valor digitado no input
-    const resultfilter = this.state.recipeList.filter((dev) => {
+    const resultfilter = this.state.recipeList.filter((rec) => {
       //filtrando na lista de receitas quais delas contêm as letras digitadas
-      return dev.name.includes(text);
+      return rec.name.includes(text);
     });
     this.setState({ recipeList: resultfilter }); //Pegando o resultado do filter e aplicando na lista.
   };
@@ -38,7 +36,6 @@ class Home extends React.Component {
   async componentDidMount() {
     const response = await fetch("/api/allrecipes");
     const data = await response.json();
-
     const recipeList = data.results.map((result) => {
       return {
         photo: result.image,
@@ -54,13 +51,33 @@ class Home extends React.Component {
 
   render() {
     return (
-
-<div>
-        <Header />
+      <div>
+        <Header>
+          <button className="btnNav" onClick={this.props.onChangePageRecipe}>
+            Receitas
+          </button>
+          <button className="btnNav" onClick={this.props.onChangePageRegister}>
+            Cadastro
+          </button>
+        </Header>
 
         <h1 className="main-title">R E C E I T A S</h1>
 
-        <section className="container-recipes">
+        {this.state.isLoading && "Loading..."}
+        {!this.state.isLoading && (
+          <RecipeList>
+            {DATA.map((item) => (
+              <Recipe
+                key={item.id}
+                image={item.image}
+                title={item.title}
+                subtitle={item.subtitle}
+              />
+            ))}
+          </RecipeList>
+        )}
+
+        {/* <section className="container-recipes">
           {DATA.map((item) => (
             <Recipe
               key={item.id}
@@ -69,9 +86,7 @@ class Home extends React.Component {
               subtitle={item.subtitle}
             />
           ))}
-        </section>
-
-
+        </section> */}
 
         <Footer />
       </div>
