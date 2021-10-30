@@ -17,8 +17,9 @@ class Recipe extends React.Component {
               }
               alt={`Receita ${this.props.title}`}
             />
-            <FaRegHeart className="heart" />
-            <FaShareAlt className="share" />
+            <div><FaRegHeart className="heart" />
+            <FaShareAlt className="share" /></div>
+ 
             <p className="recipeName"> {this.props.title}</p>
             <p>{this.props.subtitle}</p>
             <button className="seeRecipe"> Ver receita</button>
