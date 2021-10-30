@@ -1,13 +1,28 @@
 import React from "react";
 import "./style.css";
 import Header from "../../components/Header";
-import { BiTimeFive } from 'react-icons/bi'
-import { CgBowl } from 'react-icons/cg'
-import { GiNotebook } from 'react-icons/gi'
+import Footer from "../../components/Footer";
+import { BiTimeFive } from "react-icons/bi";
+import { CgBowl } from "react-icons/cg";
+import { GiNotebook } from "react-icons/gi";
+import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
+import Table from "../../components/Table";
 
 class RecipePage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      liked: false,
+    };
+  }
+  
+  handleLike = () => {
+    this.setState({ liked: !this.state.liked });
+  }
+
   render() {
     return (
       <div>
@@ -18,8 +33,8 @@ class RecipePage extends React.Component {
           <h3 className="recipe-subtitle">
             Morango, limão e pimenta-do-reino. Pode reunir esse trio que dá
             supercerto!{" "}
-          </h3> <hr />
-
+          </h3>{" "}
+          <hr />
           {/* <Recipe
             image={this.props.image}
             title={this.props.title}
@@ -39,7 +54,6 @@ class RecipePage extends React.Component {
             }
             alt={"Receita COMPOTA DE MORANGOS"}
           />
-
           <div className="recipe-text">
             <ul className="ingredients-list">
               {" "}
@@ -65,25 +79,50 @@ class RecipePage extends React.Component {
               comprimento. Mantenha os morangos menores inteiros. Transfira os
               morangos para uma assadeira média, de preferência antiaderente.
               Polvilhe com o açúcar, regue com o caldo de limão e tempere com
-              pimenta-do-reino moída na hora a gosto. 
-              Misture delicadamente com
+              pimenta-do-reino moída na hora a gosto. Misture delicadamente com
               uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou
               até que forme uma calda brilhante e os morangos fiquem macios.
             </p>
             <span className="recipe-details">
-              <strong><GiNotebook fontSize="15px" /></strong> Palmirinha
+              <strong>
+                <GiNotebook fontSize="15px" />
+              </strong>{" "}
+              Palmirinha
             </span>
             <span className="recipe-details">
-              <strong><BiTimeFive fontSize="15px" /></strong> 20 minutos
+              <strong>
+                <BiTimeFive fontSize="15px" />
+              </strong>{" "}
+              20 minutos
             </span>
             <span className="recipe-details">
-              <strong><CgBowl fontSize="15px" /></strong> 4 porções
-            </span> <br />
-            <FaRegHeart className="heart2" /> 
-            <FaShareAlt className="share2" /> 
+              <strong>
+                <CgBowl fontSize="15px" />
+              </strong>{" "}
+              4 porções
+            </span>{" "}
+            <br />
+            <div onClick={this.handleLike}>
+              {!this.state.liked && (
+                <FaRegHeart className="heart2" />
+              )}
+              {this.state.liked && (
+                <FaHeart className="heart2" />
+              )}
+            </div>
+            
+            <FaShareAlt className="share2" />
             <button className="seeMore"> Ver mais receitas</button>
           </div>
         </section>
+
+        <section className="nutri-container">
+          <Table foodName="Morango" carbs="50g" />
+          <Table />
+          <Table />
+          <Table />
+        </section>
+        {/* <Footer /> */}
       </div>
     );
   }
