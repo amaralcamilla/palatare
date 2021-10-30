@@ -1,36 +1,48 @@
 import React from "react";
 import Home from "./pages/Home";
 import RecipePage from "./pages/RecipePage";
-import Register from "./pages/Register";
 import "./App.css";
-import PropTypes from "prop-types";
-import Header from "./components/Header";
-import Recipe from "./components/RecipeList/Recipe";
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      isHomePage: true,
+      isHomePage: false,
     };
-}
+  }
 
   handleChangePage = () => {
     this.setState({ isHomePage: !this.state.isHomePage });
   };
+  //Seria o mesmo que dizer assim:
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     isHomePage: true,
+  //     isRecipePage: false,
+  //   };
+  // }
+  //goToHome = () => {
+  //   this.setState({ isHomePage: true, isRecipePage: false })
+  // }
+  // goToRecipePage = () => {
+  //   this.setState({ isHomePage: false, isRecipePage: true })
+  // }
 
   render() {
     return (
       <>
-        {this.state.isHomePage && <Home onChangePage={this.handleChangePage} />}
-        {!this.state.isHomePage && (
-          <RecipePage onChangePage={this.handleChangePage} />
-        )}
+          {this.state.isHomePage && (
+            <Home onChangePage={this.handleChangePage} />
+          )}
+          {!this.state.isHomePage && (
+            <RecipePage onChangePage={this.handleChangePage} />
+          )}
       </>
     );
   }
 }
-
 
 export default App;
