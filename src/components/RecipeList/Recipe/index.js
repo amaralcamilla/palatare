@@ -1,10 +1,23 @@
 import React from "react";
-import "./style.css";
+import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
 
 class Recipe extends React.Component {
-  render() {
+  constructor(props) {
+      super(props);
+  
+      this.state = {
+        liked: false,
+      };
+    }
+  
+    handleLike = () => {
+      this.setState({ liked: !this.state.liked });
+    }; 
+
+    render() {
+   
     return (
       <div>
         <div className="container-recipe">
@@ -12,14 +25,16 @@ class Recipe extends React.Component {
             <img
               className="recipe-image"
               src={
-                this.props.image ||
-                "https://images.pexels.com/photos/3186961/pexels-photo-3186961.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              }
+                this.props.image}
               alt={`Receita ${this.props.title}`}
             />
-            <div><FaRegHeart className="heart" />
-            <FaShareAlt className="share" /></div>
- 
+
+            <div className="reactions" onClick={this.handleLike}>
+              {!this.state.liked && <FaRegHeart className="heart" />}
+              {this.state.liked && <FaHeart className="redHeart" />}
+              <FaShareAlt className="share" />
+            </div>
+
             <p className="recipeName"> {this.props.title}</p>
             <p>{this.props.subtitle}</p>
             <button className="seeRecipe"> Ver receita</button>

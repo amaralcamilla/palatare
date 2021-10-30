@@ -8,7 +8,7 @@ import { GiNotebook } from "react-icons/gi";
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
-import Table from "../../components/Table";
+import NutriTable from "../../components/NutriTable";
 
 class RecipePage extends React.Component {
   constructor(props) {
@@ -18,15 +18,19 @@ class RecipePage extends React.Component {
       liked: false,
     };
   }
-  
+
   handleLike = () => {
     this.setState({ liked: !this.state.liked });
-  }
+  };
 
   render() {
     return (
       <div>
-        <Header />
+        <Header>
+          <button className="btnNav" onClick={this.props.onChangePage}>
+            Início
+          </button>
+        </Header>
 
         <section className="one-recipe">
           <h1 className="recipe-title">COMPOTA DE MORANGOS</h1>
@@ -102,27 +106,22 @@ class RecipePage extends React.Component {
               4 porções
             </span>{" "}
             <br />
-            <div onClick={this.handleLike}>
-              {!this.state.liked && (
-                <FaRegHeart className="heart2" />
-              )}
-              {this.state.liked && (
-                <FaHeart className="heart2" />
-              )}
+            <div className="reactions" onClick={this.handleLike}>
+              {!this.state.liked && <FaRegHeart className="heart2" />}
+              {this.state.liked && <FaHeart className="heart2" />}
+              <FaShareAlt className="share2" />
             </div>
-            
-            <FaShareAlt className="share2" />
             <button className="seeMore"> Ver mais receitas</button>
           </div>
         </section>
 
         <section className="nutri-container">
-          <Table foodName="Morango" carbs="50g" />
-          <Table />
-          <Table />
-          <Table />
+          <NutriTable foodName="Morango" carbs="50g" />
+          <NutriTable />
+          <NutriTable />
+          <NutriTable />
         </section>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }
