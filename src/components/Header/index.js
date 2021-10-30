@@ -9,15 +9,12 @@ class Header extends React.Component {
     return (
       <header>
         <img className="logo" src={logo1} />
-        
         <img className="restaurant" src={restaurante} />
         <h3>Economize e ganhe em saúde!</h3>
+
         <nav>
-          <button className="btnNav">Início</button>
-          <button className="btnNav">Receitas</button>
-
-<Search />
-
+          {this.props.children}
+          <Search />
         </nav>
       </header>
     );
@@ -25,7 +22,6 @@ class Header extends React.Component {
 }
 
 export default Header;
-
 
 //{this.props.showButton ? <button>Botão</button>}
 //PropType ---> dá pra dizer que a tabela é um array de objetos

@@ -1,45 +1,56 @@
 import React from "react";
 import Home from "./pages/Home";
 import RecipePage from "./pages/RecipePage";
+import RegisterPage from "./pages/RegisterPage";
 import "./App.css";
-
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHomePage: false,
+      isHomePage: true,
+      isRecipePage: false,
+      isRegisterPage: false,
     };
   }
-
-  handleChangePage = () => {
-    this.setState({ isHomePage: !this.state.isHomePage });
+  goToHome = () => {
+    this.setState({
+      isHomePage: true,
+      isRecipePage: false,
+      isRegisterPage: false,
+    });
   };
-  //Seria o mesmo que dizer assim:
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     isHomePage: true,
-  //     isRecipePage: false,
-  //   };
-  // }
-  //goToHome = () => {
-  //   this.setState({ isHomePage: true, isRecipePage: false })
-  // }
-  // goToRecipePage = () => {
-  //   this.setState({ isHomePage: false, isRecipePage: true })
-  // }
+  goToRecipePage = () => {
+    this.setState({
+      isHomePage: false,
+      isRecipePage: true,
+      isRegisterPage: false,
+    });
+  };
+  goToRegisterPage = () => {
+    this.setState({
+      isHomePage: false,
+      isRecipePage: false,
+      isRegisterPage: true,
+    });
+  };
 
   render() {
     return (
       <>
-          {this.state.isHomePage && (
-            <Home onChangePage={this.handleChangePage} />
-          )}
-          {!this.state.isHomePage && (
-            <RecipePage onChangePage={this.handleChangePage} />
-          )}
+        {this.state.isHomePage && (
+          <Home
+            onChangePageRecipe={this.goToRecipePage}
+            onChangePageRegister={this.goToRegisterPage}
+          />
+        )}
+
+        {this.state.isRecipePage && (
+         <RecipePage onChangePage={this.goToHome} /> 
+         )}
+        {this.state.isRegisterPage && (
+          <RegisterPage onChangePage={this.goToHome} />
+        )}
       </>
     );
   }
