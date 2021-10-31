@@ -1,23 +1,21 @@
 # Projeto Palatare
-
 O proprietário de um restaurante te procurou para desenvolver o site do estabelecimento. Para isso, ele te passa as seguintes informações:
+- Nome do estabelecimento: Palatare
+- Informações: por ora, o site deve apresentar uma lista de receitas criadas a partir do reaproveitamento de alimentos que comumente são jogados fora, como cascas, talos, folhas e sementes de legumes, frutas e verduras. Além de uma tabela contendo as informações nutricionais de alguns alimentos.
+- Slogan: Economize e ganhe em saúde!
+- Contato: palatare@palatare.com
 
-Nome do estabelecimento: Palatare
-Informações: por ora, o site deve apresentar uma lista de receitas criadas a partir do reaproveitamento de alimentos que comumente são jogados fora, como cascas, talos, folhas e sementes de legumes, frutas e verduras. Além de uma tabela contendo as informações nutricionais de alguns alimentos.
-Slogan: Economize e ganhe em saúde!
-Contato: palatare@palatare.com
-O cliente pede para que no site contenha:
+### O cliente pede para que no site contenha:
+- Header: com logomarca e nome do estabelecimento no canto superior esquerdo da tela
+- Main: com campo de busca e uma lista 6 de receitas (apresentadas com grid de 3 em 3)
+- Rodapé: contendo o site para contato com o restaurante
 
-Header: com logomarca e nome do estabelecimento no canto superior esquerdo da tela
-Main: com campo de busca e uma lista 6 de receitas (apresentadas com grid de 3 em 3)
-Rodapé: contendo o site para contato com o restaurante
-Para que tenhas sucesso no desenvolvimento do site, siga o passo-a-passo a seguir:
-
+### Para que tenhas sucesso no desenvolvimento do site, siga o passo-a-passo a seguir:
 1. Crie um componente (Header) que exiba o nome e logo do estabelecimento nas páginas do site (não há uma logo padrão, use a criatividade!), além de um título da página atual.
 
 2. Adicione no componente (Header) a navegação do site. Possíveis opções: Início e Receitas. Não exiba no cabeçalho a opção para a página atual.
 
-3. Crie um componente que apresente uma lista de receitas com alimentos reaproveitados. (Seja criativ@! Não precisa ser necessariamente receitas reais). Cada receita da lista deve conter: imagem, título, subtítulo e um botão para abrir cada receita.
+3. Crie um componente que apresente uma lista de receitas com alimentos reaproveitados. (Seja criativo! Não precisa ser necessariamente receitas reais). Cada receita da lista deve conter: imagem, título, subtítulo e um botão para abrir cada receita.
 
 4. Crie um componente de busca que seja apresentado no centro da tela. Quando o usuário digitar, filtre a lista com base no título e/ou subtítulo.
 
@@ -33,3 +31,32 @@ Para que tenhas sucesso no desenvolvimento do site, siga o passo-a-passo a segui
 
 10. Crie a página para apresentar os dados da receita contendo a Imagem e os detalhes da receita, além da Tabela e Botão de Curtir.
 O conteúdo precisa estar entre o cabeçalho e o rodapé do site.
+
+11. Utilizando o Miragejs, crie uma Mock API para fornecer as informações da página inicial.
+
+12. Utilizando o Miragejs, crie um endpoint na sua Mock API para fornecer as informações da página da receita. A API deve receber um identificador da receita e trazer as informações necessárias para renderizar os detalhes da página.
+
+13. Crie o componente formulário, com rótulos, campos de entrada e botão:
+  - Título: Fale conosco!
+  - Campos (adicionar validação nos campos):
+     - Nome (campo obrigatório)
+     - E-mail (campo obrigatório, validar formato)
+     - Mensagem (campo obrigatório, máximo 250 caracteres)
+  - Botão: Enviar Mensagem
+     - Apenas habilitar quando os campos forem válidos
+     - Desabilitar quando pressionar o botão
+     - Exibir um ícone de carregamento no botão depois de enviar as informações
+
+14. Utilizando o Miragejs, crie um endpoint na sua Mock API para salvar as informações do seu formulário (Tutorial: Part 3 – Dynamic Handlers).
+
+15. Você adicionará um manipulador de eventos ao form elemento para enviar os dados do formulário para o endpoint da API criado no exercício anterior.
+  
+16. Agora, você alertará o usuário de que o formulário está sendo enviado, através de uma mensagem curta no HTML que será exibida quando submitting for true.
+  
+17. Defina o roteamento das páginas do site, com o componente React-Router-Dom.
+
+18. Utilizando os componentes do React Router Dom, implemente a navegabilidade da sua aplicação.
+
+19. Atualize os componentes Stateless da sua aplicação para que usem função.
+
+20. Aplique o Material UI no projeto e utilize os componentes padrão da biblioteca.  
