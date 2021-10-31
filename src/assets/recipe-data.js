@@ -15,8 +15,6 @@ const DATA = [
           "1 colher (sopa) de caldo de limão",
           "pimenta-do-reino moída na hora a gosto",
         ],
-      },
-      {
         prepare:
           "Preaqueça o forno a 200 ºC (temperatura média).Lave, descarte os cabinhos e corte os morangos maiores ao meio, no sentido do comprimento. Mantenha os morangos menores inteiros. Transfira os morangos para uma assadeira média, de preferência antiaderente. Polvilhe com o açúcar, regue com o caldo de limão e tempere com pimenta-do-reino moída na hora a gosto. Misture delicadamente com uma espátula. Leve ao forno para assar por cerca de 20 minutos, ou até que forme uma calda brilhante e os morangos fiquem macios.",
       },
