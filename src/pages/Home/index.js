@@ -7,14 +7,6 @@ import Footer from "../../components/Footer";
 import DATA from "../../assets/recipe-data";
 
 class Home extends React.Component {
-  // handleChange = (event) => {
-  //   const text = event.target.value
-  //   DATA.filter((recipes) => {
-  //   return recipes.title.toLowerCase().includes(text.toLowerCase());
-  //   })
-  //   this.setState({recipes: filterData})
-  //   }
-
   constructor(props) {
     super(props);
 
@@ -22,11 +14,13 @@ class Home extends React.Component {
       isLoading: true,
       recipeList: [],
     };
+    this.listData = [];
   }
-
+//Para buscar receitas no SearchBar
   handleChange = (event) => {
     const text = event.target.value; //pegar o valor digitado no input
-    const resultfilter = this.state.recipeList.filter((rec) => {
+    console.log(text);
+    const resultfilter = this.listData.filter((rec) => {
       //filtrando na lista de receitas quais delas contêm as letras digitadas
       return rec.name.includes(text);
     });
@@ -43,6 +37,9 @@ class Home extends React.Component {
         subtitle: result.subtitle,
       };
     });
+
+    this.listData = recipeList;
+
     this.setState({
       isLoading: false,
       recipeList,
@@ -53,12 +50,10 @@ class Home extends React.Component {
     return (
       <div>
         <Header>
-          <button className="btnNav" onClick={this.props.onChangePageRecipe}>
-            Receitas
-          </button>
           <button className="btnNav" onClick={this.props.onChangePageRegister}>
             Cadastro
           </button>
+          <Search onChange={this.handleChange} />
         </Header>
 
         <h1 className="main-title">R E C E I T A S</h1>
@@ -72,43 +67,14 @@ class Home extends React.Component {
                 image={item.image}
                 title={item.title}
                 subtitle={item.subtitle}
+                onSelect={(e) => this.props.onChangePageRecipe(item)}
               />
             ))}
           </RecipeList>
         )}
 
-        {/* <section className="container-recipes">
-          {DATA.map((item) => (
-            <Recipe
-              key={item.id}
-              image={item.image}
-              title={item.title}
-              subtitle={item.subtitle}
-            />
-          ))}
-        </section> */}
-
         <Footer />
       </div>
-
-      // <>
-      //   <Header />
-
-      //   <Search onChange={this.handleChange} />
-
-      //   {this.state.isLoading && "Loading..."}
-      //   {!this.state.isLoading && (
-      //     <RecipeList>
-      //       {this.state.recipeList.map((rec) => (
-      //         <Recipe
-      //           photo={rec.photo}
-      //           title={rec.title}
-      //           subtitle={rec.subtitle}
-      //         />
-      //       ))}
-      //     </RecipeList>
-      //   )}
-      // </>
     );
   }
 }

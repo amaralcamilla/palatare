@@ -26,7 +26,7 @@ class Recipe extends React.Component {
               className="recipe-image"
               src={
                 this.props.image}
-              alt={`Receita ${this.props.title}`}
+              alt={`Receita ${this.props.title}`} onClick={this.props.onSelect}
             />
 
             <div className="reactions" onClick={this.handleLike}>
@@ -37,7 +37,7 @@ class Recipe extends React.Component {
 
             <p className="recipeName"> {this.props.title}</p>
             <p>{this.props.subtitle}</p>
-            <button className="seeRecipe"> Ver receita</button>
+            <button className="seeRecipe" onClick={this.props.onSelect}> Ver receita</button>
           </li>
         </div>
       </div>
