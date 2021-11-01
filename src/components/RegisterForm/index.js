@@ -62,8 +62,10 @@ class RegisterForm extends React.Component {
               name="email"
               value={this.state.email}
               onChange={this.handleChange}
+              placeholder="exemplo@mail.com"
+              pattern=".+@.+\..+"
               required
-            />
+            /> 
           </label>
           <label className="data-label">
             Mensagem:{" "}
@@ -74,7 +76,7 @@ class RegisterForm extends React.Component {
               value={this.state.message}
               onChange={this.handleChange}
               required
-            />
+            /> 
           </label>
           <input className="btn-submit" type="submit" value="Enviar" />
         </form>
