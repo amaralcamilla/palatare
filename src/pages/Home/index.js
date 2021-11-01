@@ -13,10 +13,14 @@ class Home extends React.Component {
     this.state = {
       isLoading: true,
       recipeList: [],
+      info: {
+        title: "",
+        description: "",
+      },
     };
     this.listData = [];
   }
-//Para buscar receitas no SearchBar
+  //Para buscar receitas no SearchBar
   handleChange = (event) => {
     const text = event.target.value; //pegar o valor digitado no input
     console.log(text);
@@ -28,8 +32,12 @@ class Home extends React.Component {
   };
 
   async componentDidMount() {
+    //Para buscar os dados das receitas e info (title e description) via api:
     const response = await fetch("/api/allrecipes");
+    const responseInfo = await fetch("/api/info");
     const data = await response.json();
+    const dataInfo = await responseInfo.json();
+
     const recipeList = data.results.map((result) => {
       return {
         photo: result.image,
@@ -43,6 +51,10 @@ class Home extends React.Component {
     this.setState({
       isLoading: false,
       recipeList,
+      info: {
+        title: dataInfo.title,
+        description: dataInfo.description,
+      },
     });
   }
 
@@ -73,7 +85,10 @@ class Home extends React.Component {
           </RecipeList>
         )}
 
-        <Footer />
+        <Footer
+          mainTitle={this.state.info.title}
+          description={this.state.info.description}
+        />
       </div>
     );
   }
