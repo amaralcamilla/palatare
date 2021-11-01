@@ -28,6 +28,7 @@
   }
   .heart:hover {
     color: #F83E25;
+    cursor: pointer;
   }
   .share:hover{
     color: #008e3d;
@@ -38,6 +39,7 @@
     height: 200px;
     object-fit: cover;
     padding-bottom:5px;
+    cursor: pointer;
   }
   
   .seeRecipe {
@@ -49,6 +51,7 @@
     font-family: Tahoma, sans-serif;
     margin-top: 8px;
     border: transparent;
+    cursor: pointer;
   }
   
   .seeRecipe:hover {
