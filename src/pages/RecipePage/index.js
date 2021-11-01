@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import DATA from "../../assets/recipe-data";
 import SelectedRecipe from "./SelectedRecipe";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class RecipePage extends React.Component {
   constructor(props) {
@@ -33,12 +34,12 @@ class RecipePage extends React.Component {
     return (
       <div>
         <Header>
-          <button className="btnNav" onClick={this.props.onChangePage}>
-            Início
-          </button>
-          <button className="btnNav" onClick={this.props.onChangePageRegister}>
-            Cadastro
-          </button>
+          <Link to="/">
+            <button className="btnNav"> Início </button>
+          </Link>
+          <Link to="/register">
+            <button className="btnNav"> Cadastro </button>
+          </Link>
         </Header>
 
         {this.state.isLoading && "Loading..."}

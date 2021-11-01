@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import RegisterForm from "../../components/RegisterForm"
 import Footer from "../../components/Footer";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class RegisterPage extends React.Component {
   constructor(props) {
@@ -20,9 +21,12 @@ class RegisterPage extends React.Component {
     return (
       <div>
         <Header>
-          <button className="btnNav" onClick={this.props.onChangePage}>
+         <Link to="/">
+          <button className="btnNav">
             Início
           </button>
+         </Link>
+         
         </Header>
 
         <RegisterForm />

@@ -5,6 +5,7 @@ import RecipeList from "../../components/RecipeList";
 import Recipe from "../../components/RecipeList/Recipe";
 import Footer from "../../components/Footer";
 import DATA from "../../assets/recipe-data";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class Home extends React.Component {
   constructor(props) {
@@ -72,11 +73,11 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         <Header>
-          <button className="btnNav" onClick={this.props.onChangePageRegister}>
-            Cadastro
-          </button>
+          <Link to="/register">
+            <button className="btnNav"> Cadastro </button>
+          </Link>
           <Search onChange={this.handleChange} />
         </Header>
 
@@ -86,13 +87,19 @@ class Home extends React.Component {
         {!this.state.isLoading && (
           <RecipeList>
             {DATA.map((item) => (
-              <Recipe
-                key={item.id}
-                image={item.image}
-                title={item.title}
-                subtitle={item.subtitle}
-                onSelect={(e) => this.props.onChangePageRecipe(item)}
-              />
+              <Link
+                to={{
+                  pathname: "/recipe",
+                  state: { item },
+                }}
+              >
+                <Recipe
+                  key={item.id}
+                  image={item.image}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                />
+              </Link>
             ))}
           </RecipeList>
         )}
@@ -101,7 +108,7 @@ class Home extends React.Component {
           mainTitle={this.state.info.title}
           description={this.state.info.description}
         />
-      </div>
+      </>
     );
   }
 }
