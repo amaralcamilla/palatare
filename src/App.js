@@ -11,6 +11,7 @@ class App extends React.Component {
       isHomePage: true,
       isRecipePage: false,
       isRegisterPage: false,
+      selectedRecipe: null,
     };
   }
   goToHome = () => {
@@ -20,11 +21,12 @@ class App extends React.Component {
       isRegisterPage: false,
     });
   };
-  goToRecipePage = () => {
+  goToRecipePage = (selectedRecipe) => {
     this.setState({
       isHomePage: false,
       isRecipePage: true,
       isRegisterPage: false,
+      selectedRecipe,
     });
   };
   goToRegisterPage = () => {
@@ -46,7 +48,7 @@ class App extends React.Component {
         )}
 
         {this.state.isRecipePage && (
-         <RecipePage onChangePage={this.goToHome} /> 
+         <RecipePage rec={this.state.selectedRecipe} onChangePage={this.goToHome} /> 
          )}
         {this.state.isRegisterPage && (
           <RegisterPage onChangePage={this.goToHome} />
