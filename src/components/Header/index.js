@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 import logo1 from "../../img/logo1.png";
-import Search from "../Search";
 import restaurante from "../../img/restaurante.png";
 
 class Header extends React.Component {
@@ -14,14 +13,11 @@ class Header extends React.Component {
 
         <nav>
           {this.props.children}
-          <Search />
         </nav>
+
       </header>
     );
   }
 }
 
 export default Header;
-
-//{this.props.showButton ? <button>Botão</button>}
-//PropType ---> dá pra dizer que a tabela é um array de objetos

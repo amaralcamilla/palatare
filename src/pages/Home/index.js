@@ -20,19 +20,31 @@ class Home extends React.Component {
     };
     this.listData = [];
   }
+
   //Para buscar receitas no SearchBar
   handleChange = (event) => {
     const text = event.target.value; //pegar o valor digitado no input
     console.log(text);
-    const resultfilter = this.listData.filter((rec) => {
-      //filtrando na lista de receitas quais delas contêm as letras digitadas
-      return rec.name.includes(text);
-    });
-    this.setState({ recipeList: resultfilter }); //Pegando o resultado do filter e aplicando na lista.
+    const resultfilter = this.todasAsReceitas.filter(
+      (receita) => {
+        const tituloSubtitulo = receita.title + receita.subtitle;
+        return tituloSubtitulo.toLowerCase().includes(text.toLowerCase());
+      },
+
+      // const resultfilter = this.listData.filter((rec) => {
+      //   //filtrando na lista de receitas quais delas contêm as letras digitadas
+      //   return rec.name.includes(text);
+      // });
+      this.setState({ recipeList: resultfilter })
+    ); //Pegando o resultado do filter e aplicando na lista.
   };
 
   async componentDidMount() {
     //Para buscar os dados das receitas e info (title e description) via api:
+    //1. Busca dado (fetch).
+    //2. Traduz o dado (json)
+    //3. Seleciona os dados que quer e passa por eles (map).
+    //4. Atualiza estado, atualizando o lifecycle (setState logo abaixo).
     const response = await fetch("/api/allrecipes");
     const responseInfo = await fetch("/api/info");
     const data = await response.json();
@@ -40,7 +52,7 @@ class Home extends React.Component {
 
     const recipeList = data.results.map((result) => {
       return {
-        photo: result.image,
+        image: result.image,
         title: result.title,
         subtitle: result.subtitle,
       };

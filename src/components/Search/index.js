@@ -10,7 +10,7 @@ class Search extends React.Component {
         <input
           type="text"
           placeholder="Pesquisar receita"
-          onChange={this.handleChange}
+          onChange={this.props.onChange}
         />{" "}
         <FaSearch />
       </div>
