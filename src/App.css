@@ -233,7 +233,7 @@ footer {
   color: white;
 }
 
-/* RECIPELIST */
+/* RECIPE LIST */
 .recipeList {
   display: flex;
   flex-direction: row;
@@ -312,7 +312,7 @@ p {
   text-align: center;
 }
 
-/* NUTRITABLE */
+/* NUTRI TABLE */
 .nutri-info {
   background-color: white;
   border-radius: 8px;
@@ -334,4 +334,58 @@ p {
 }
 td {
   padding-right: 15px;
+}
+
+/* REGISTER FORM */
+.register-title {
+  padding-top: 5%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin-left: 30px;
+  color: #353535;
+}
+
+.message-image {
+  width: 370px;
+  height: 370px;
+  object-fit: cover;
+  margin: 5px 30px 30px 40px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  border-radius: 5px;
+  float: right;
+}
+
+.register-form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.data-label {
+  display: inline;
+  font-size: 1em;
+  margin: 20px 0px 20px 20px;
+}
+.data-input {
+  width: 300px;
+}
+
+.message {
+  width: 300px;
+  margin: 20px;
+}
+
+.btn-save {
+  background: #008e3d;
+  color: #FFF;
+  border-radius: 10px;
+  border: none;
+  margin: 20px;
+  padding: 10px;
+  width: 100px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.494);;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.494);
+  cursor: pointer;
 }
