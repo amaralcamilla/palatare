@@ -2,10 +2,8 @@ import React from "react";
 import Header from "../../components/Header";
 import Search from "../../components/Search";
 import RecipeList from "../../components/RecipeList";
-import Recipe from "../../components/RecipeList/Recipe";
 import Footer from "../../components/Footer";
-import DATA from "../../assets/recipe-data";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 
 class Home extends React.Component {
   constructor(props) {
@@ -84,12 +82,12 @@ class Home extends React.Component {
                   state: { item },
                 }}
               >
-                <Recipe
+                
                   key={item.id}
                   image={item.image}
                   title={item.title}
                   subtitle={item.subtitle}
-                />
+                
               </Link>
             ))}
           </RecipeList>
