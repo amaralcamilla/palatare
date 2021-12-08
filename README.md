@@ -1,5 +1,7 @@
 # Projeto Palatare
 
+![project_preview](./src/assets/Prototipação_palatare.png)
+
 O proprietário de um restaurante te procurou para desenvolver o site do estabelecimento. Para isso, ele te passa as seguintes informações:
 
 - Nome do estabelecimento: Palatare
