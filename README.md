@@ -1,6 +1,7 @@
+## Assista o [vídeo do desenvolvimento](https://www.linkedin.com/posts/amaralcamilla_react-javascript-css-activity-6858381274684502016-ygqB)
+
 # Projeto Palatare
 
-## Preview:
 ![project_preview](./src/assets/Prototipação_palatare.png)
 
 ## Descrição do exercício
