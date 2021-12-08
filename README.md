@@ -1,14 +1,14 @@
-##Projeto Palatare
+# Projeto Palatare
 
 O proprietário de um restaurante te procurou para desenvolver o site do estabelecimento. Para isso, ele te passa as seguintes informações:
 
-Nome do estabelecimento: Palatare
+- Nome do estabelecimento: Palatare
 Informações: por ora, o site deve apresentar uma lista de receitas criadas a partir do reaproveitamento de alimentos que comumente são jogados fora, como cascas, talos, folhas e sementes de legumes, frutas e verduras. Além de uma tabela contendo as informações nutricionais de alguns alimentos.
-Slogan: Economize e ganhe em saúde!
+- Slogan: Economize e ganhe em saúde!
 Contato: palatare@palatare.com
 O cliente pede para que no site contenha:
 
-Header: com logomarca e nome do estabelecimento no canto superior esquerdo da tela
+- Header: com logomarca e nome do estabelecimento no canto superior esquerdo da tela
 Main: com campo de busca e uma lista 6 de receitas (apresentadas com grid de 3 em 3)
 Rodapé: contendo o site para contato com o restaurante
 Para que tenhas sucesso no desenvolvimento do site, siga o passo-a-passo (exercícios) a seguir:
